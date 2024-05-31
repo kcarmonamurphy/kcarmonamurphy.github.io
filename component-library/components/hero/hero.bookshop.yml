@@ -23,13 +23,13 @@ blueprint:
 
 # Overrides any fields in the blueprint when viewing this component in the component browser
 preview:
-  title: Hi there, I am Vanessa Marley
+  title: Hi there, I am Kevin Carmona-Murphy
   description_html: <strong>Photographer</strong> and <strong>Visual Content
     Strategist</strong> from Albany. I work as a lifestyle, product, and
     landscape photographer, creating images for a diverse range of requests,
     from online media to printed artwork.
   image: /images/01.jpg
-  image_alt: Vanessa Marley's picture
+  image_alt: Kevin Carmona-Murphy's picture
   cta_button: Get in touch
   cta_button_link: "#contact"
   works_button: See my works

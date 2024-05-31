@@ -1,7 +1,7 @@
 {
-  "name": "vonge-jekyll-bookshop-template",
+  "name": "kcarmonamurphy.github.io",
   "private": true,
-  "description": "Vonge template for CloudCannon",
+  "description": "Portfolio Site for Kevin Carmona-Murphy",
   "scripts": {
     "bookshop": "bookshop-browser",
     "jekyll:install": "BUNDLE_GEMFILE=site/Gemfile bundle install",
@@ -9,23 +9,21 @@
     "bookshop-hosted": "bookshop-browser -b ./component-library -o site/js/bookshop-hosted.js",
     "bookshop-live": "bookshop-live -b ./component-library -o site/_cloudcannon/bookshop-live.js",
     "jekyll": "BUNDLE_GEMFILE=site/Gemfile bundle exec jekyll serve --source site --port 6060 --trace --unpublished",
-    "start": "run-p bookshop jekyll",
+    "start": "run-p jekyll bookshop",
     "deploy": "rm -rf docs/ && cp -r _site/ docs/"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CloudCannon/vonge-jekyll-bookshop-template.git"
+    "url": "git+https://github.com/kcarmonamurphy/kcarmonamurphy.github.io"
   },
   "author": "",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/CloudCannon/vonge-jekyll-bookshop-template/issues"
-  },
-  "homepage": "https://github.com/CloudCannon/vonge-jekyll-bookshop-template#readme",
+  "homepage": "https://github.com/kcarmonamurphy/kcarmonamurphy.github.io",
   "devDependencies": {
     "@bookshop/browser": "3.9.0",
     "@bookshop/jekyll-engine": "3.9.0",
     "@bookshop/live": "3.9.0",
+    "nodemon": "^3.1.2",
     "npm-run-all": "^4.1.5"
   },
   "dependencies": {

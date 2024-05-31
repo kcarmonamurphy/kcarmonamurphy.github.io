@@ -3561,7 +3561,7 @@
 }
 @media all, bookshop {
   .c-hero__left {
-    max-width: 510px;
+    max-width: 550px;
     padding-right: 20px;
     margin-right: auto;
   }
@@ -3699,7 +3699,7 @@
   .c-hero__image {
     position: relative;
     z-index: 10;
-    width: 480px;
+    width: 500px;
     height: 520px;
     margin-left: auto;
   }
