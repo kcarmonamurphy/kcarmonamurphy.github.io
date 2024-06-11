@@ -6,23 +6,23 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Quiet Lake</title>
+  <title>Databaseless Digital Photo Album</title>
   <meta name='description' content='<p><strong>Senior Software Engineer</strong> with over 8 years of experience. Web App development using <strong>React, Ember.js and Typescript</strong> on the frontend, <strong>Rails, Django and Node.js</strong> on the backend. Believer in thorough <strong>automated tests</strong> and <strong>documentation.</strong></p>'>
 
-  <link rel="canonical" href="http://localhost:6060/project/quiet-lake">
+  <link rel="canonical" href="http://localhost:6060/project/photo-app">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Quiet Lake – Kevin Carmona-Murphy">
-  <meta name="twitter:description" content="In qua quid est boni praeter summam voluptatem, et eam sempiternam? Cur post Tarentum ad Archytam? Qua ex cognitione facilior facta est investigatio rerum occultissimarum. Negat enim tenuissimo victu, id est contemptissimis escis et potionibus, minorem voluptatem.
+  <meta name="twitter:title" content="Databaseless Digital Photo Album – Kevin Carmona-Murphy">
+  <meta name="twitter:description" content="Created: February 2018
 ">
-  <meta name="twitter:image:src" content="http://localhost:6060/images/project-7.jpg">
+  <meta name="twitter:image:src" content="http://localhost:6060/images/photo-album.jpg">
 
   <!-- Facebook OpenGraph -->
-  <meta property="og:title" content="Quiet Lake – Kevin Carmona-Murphy">
-  <meta property="og:description" content="In qua quid est boni praeter summam voluptatem, et eam sempiternam? Cur post Tarentum ad Archytam? Qua ex cognitione facilior facta est investigatio rerum occultissimarum. Negat enim tenuissimo victu, id est contemptissimis escis et potionibus, minorem voluptatem.
+  <meta property="og:title" content="Databaseless Digital Photo Album – Kevin Carmona-Murphy">
+  <meta property="og:description" content="Created: February 2018
 ">
-  <meta property="og:image" content="http://localhost:6060/images/project-7.jpg">
+  <meta property="og:image" content="http://localhost:6060/images/photo-album.jpg">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
@@ -144,9 +144,9 @@
 
 <div class="container">
   <div class="c-page-heading">
-    <h1 class="c-page-heading__title">Quiet Lake</h1>
+    <h1 class="c-page-heading__title">Databaseless Digital Photo Album</h1>
     
-      <p class="c-page-heading__description">Photography</p>
+      <p class="c-page-heading__description">A way to avoid vendor-lockin by organizing photos and videos using folders and EXIF metadata</p>
     
   </div>
 </div>
@@ -159,7 +159,7 @@
   <div class="row">
     <div class="col col-12">
       <div class="c-page-image animate">
-        <img loading="lazy" src="/images/project-7.jpg" alt="">
+        <img loading="lazy" src="/images/photo-album.jpg" alt="">
       </div>
     </div>
   </div>
@@ -167,24 +167,48 @@
 <!--bookshop-live end-->
 
   <div class="page animate">
-    <p>In qua quid est boni praeter summam voluptatem, et eam sempiternam? Cur post Tarentum ad Archytam? Qua ex cognitione facilior facta est investigatio rerum occultissimarum. Negat enim tenuissimo victu, id est contemptissimis escis et potionibus, minorem voluptatem.</p>
+    <p><strong>Created:</strong> February 2018</p>
 
-<p><img src="/images/image-example-3.jpg" alt="Palm trees" width="1200" height="900" /></p>
+<h3 id="description">Description</h3>
 
-<p>Praeteritis, inquit, gaudeo. Praeteritis, inquit, gaudeo. Quod, inquit, quamquam voluptatibus quibusdam est saepe iucundius, tamen expetitur propter voluptatem. Scientiam pollicentur, quam non erat mirum sapientiae cupido patria esse cariorem. Non quaeritur autem quid naturae tuae consentaneum sit, sed quid disciplinae. Ita ne hoc quidem modo paria peccata sunt. Ita prorsus, inquam; Nunc ita separantur, ut disiuncta sint, quo nihil potest esse perversius. Virtutibus igitur rectissime mihi videris et ad consuetudinem nostrae orationis.</p>
+<p>The Databaseless Digital Photo Album is an idea to design a digital media album similar to Google Photos but <em>which avoids vendor lock-in</em> by <strong>organizing photos and videos in folders instead of albums</strong>, and <strong>uses native JPEG EXIF metadata</strong> to store things like title, camera information, location, persons, etc.</p>
 
-<p><img src="/images/image-example-4.jpg" alt="Sea" width="1200" height="900" /></p>
+<h3 id="motivation">Motivation</h3>
 
-<p>Defecerit Sed isti ipsi, qui voluptate et dolore omnia metiuntur, nonne clamant sapienti plus semper adesse quod velit quam quod nolit? Quae quidem sapientes sequuntur duce natura tamquam videntes; Quod enim dissolutum sit, id esse sine sensu, quod autem sine sensu. Sunt omnia Longum est enim ad omnia respondere, quae a te dicta sunt. Nam cui proposito sit conservatio sui, necesse est huic partes quoque sui caras suo genere laudabiles servari.</p>
+<p>The motivation to create such an application stems from not being satisfied with current photo organization solutions on the market and the inherent difficulty of moving your memories from one service to another.</p>
+
+<p>A lot of different services like Google Photos, Flickr, iCloud Photos etc <em>purposefully make it difficult for you to leave the platform</em> once you’ve uploaded your photos and videos. For example, the export tool for Google Photos returns all of the modifications and edits you’ve made to your photos and albums as a json file that you’ll have to parse manually via the use of a third party service, some of which can be costly.</p>
+
+<p>By <strong>storing modifications made to a photo or video via built in protocols like EXIF or XMP</strong>, and using file and folder based storage mechanisms present in all operating systems, a databaseless photo album application could allow for a portable way to store and organize our media collections.</p>
+
+<h3 id="technical-design">Technical Design</h3>
+
+<p>One of the main challenges of the databaseless approach is performant loading of thumbnails and searching. One approach is to use a database as a caching layer which is updated whenever new files are added/removed/modified from the file system, or when modifications are made to photo/video metadata. This way, loading a page of 100 files will require a quick lookup in a database rather than parsing each original file at several megabytes.</p>
+
+<h3 id="potential-issues">Potential Issues</h3>
+
+<p>Keeping this “caching database” in sync could pose a challenge. If a photo metadata is modified but the caching layer isn’t updated, there is incongruency in the system. Best-effor modification of the caching layer wouldn’t suffice, the system would need to have a guarantee that the caching layer has been updated.</p>
+
+<h3 id="tech-stack">Tech Stack</h3>
+
+<p>Any backend framework could be used either as an API only server or with built-in front-end layer. An ideal scenario would be a frontend microservice running a highly optimzed web app in a modern JS framework like React or Ember.js, with a backend using a framework designed for performance. A database capable of storing image thumbnails and supporting arbitrary relationships would be necessary to support mirroring an operating system file system.</p>
+
+<h3 id="unfinished-implementations">Unfinished Implementations</h3>
+
+<ul>
+  <li><strong>Photr (Newer incarnation using Rails v5 + Ember.js and JSON API Resources):</strong> <a href="https://github.com/kcarmonamurphy/photr" target="_blank">https://github.com/kcarmonamurphy/photr ⎘</a></li>
+  <li><strong>Photonest (Backend for Photon using Neo4j as storage engine):</strong> <a href="https://github.com/kcarmonamurphy/photonest" target="_blank">https://github.com/kcarmonamurphy/photonest ⎘</a></li>
+  <li><strong>Photon (Ember frontend for Photonest):</strong> <a href="https://github.com/kcarmonamurphy/photon" target="_blank">https://github.com/kcarmonamurphy/photon ⎘</a></li>
+</ul>
 
   </div>
 
   
   <div class="project__navigation animate">
-    <a class="project__prev" href="/project/antelope-anyon">
+    <a class="project__prev" href="/project/multi-translator">
       <div class="project__box">
         <span class="project__nav__info">Next Project</span>
-        <h2 class="project__nav__title">Antelope Canyon<i class="ion ion-md-arrow-round-forward arrow-right"></i></h2>
+        <h2 class="project__nav__title">Multi-translator app using Angular.js<i class="ion ion-md-arrow-round-forward arrow-right"></i></h2>
       </div>
     </a>
   </div>

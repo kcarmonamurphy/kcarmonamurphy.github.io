@@ -6,23 +6,23 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Sea and rest</title>
+  <title>Neo4j vs PostgreSQL</title>
   <meta name='description' content='<p><strong>Senior Software Engineer</strong> with over 8 years of experience. Web App development using <strong>React, Ember.js and Typescript</strong> on the frontend, <strong>Rails, Django and Node.js</strong> on the backend. Believer in thorough <strong>automated tests</strong> and <strong>documentation.</strong></p>'>
 
-  <link rel="canonical" href="http://localhost:6060/project/sea-and-rest">
+  <link rel="canonical" href="http://localhost:6060/project/neo4j-vs-postgresql">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Sea and rest – Kevin Carmona-Murphy">
-  <meta name="twitter:description" content="In qua quid est boni praeter summam voluptatem, et eam sempiternam? Cur post Tarentum ad Archytam? Qua ex cognitione facilior facta est investigatio rerum occultissimarum. Negat enim tenuissimo victu, id est contemptissimis escis et potionibus, minorem voluptatem.
+  <meta name="twitter:title" content="Neo4j vs PostgreSQL – Kevin Carmona-Murphy">
+  <meta name="twitter:description" content="Created: November 2019
 ">
-  <meta name="twitter:image:src" content="http://localhost:6060/images/project-3.jpg">
+  <meta name="twitter:image:src" content="http://localhost:6060/images/airplane.jpg">
 
   <!-- Facebook OpenGraph -->
-  <meta property="og:title" content="Sea and rest – Kevin Carmona-Murphy">
-  <meta property="og:description" content="In qua quid est boni praeter summam voluptatem, et eam sempiternam? Cur post Tarentum ad Archytam? Qua ex cognitione facilior facta est investigatio rerum occultissimarum. Negat enim tenuissimo victu, id est contemptissimis escis et potionibus, minorem voluptatem.
+  <meta property="og:title" content="Neo4j vs PostgreSQL – Kevin Carmona-Murphy">
+  <meta property="og:description" content="Created: November 2019
 ">
-  <meta property="og:image" content="http://localhost:6060/images/project-3.jpg">
+  <meta property="og:image" content="http://localhost:6060/images/airplane.jpg">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
@@ -144,9 +144,9 @@
 
 <div class="container">
   <div class="c-page-heading">
-    <h1 class="c-page-heading__title">Sea and rest</h1>
+    <h1 class="c-page-heading__title">Neo4j vs PostgreSQL</h1>
     
-      <p class="c-page-heading__description">Photography</p>
+      <p class="c-page-heading__description">Neo4j can be substantially faster for certain types of queries because of the benefits gained from index-free adjacency</p>
     
   </div>
 </div>
@@ -159,7 +159,7 @@
   <div class="row">
     <div class="col col-12">
       <div class="c-page-image animate">
-        <img loading="lazy" src="/images/project-3.jpg" alt="">
+        <img loading="lazy" src="/images/airplane.jpg" alt="">
       </div>
     </div>
   </div>
@@ -167,24 +167,93 @@
 <!--bookshop-live end-->
 
   <div class="page animate">
-    <p>In qua quid est boni praeter summam voluptatem, et eam sempiternam? Cur post Tarentum ad Archytam? Qua ex cognitione facilior facta est investigatio rerum occultissimarum. Negat enim tenuissimo victu, id est contemptissimis escis et potionibus, minorem voluptatem.</p>
+    <p><strong>Created:</strong> November 2019</p>
 
-<p><img src="/images/image-example-3.jpg" alt="Palm trees" width="1200" height="900" /></p>
+<h3 id="description">Description</h3>
 
-<p>Praeteritis, inquit, gaudeo. Praeteritis, inquit, gaudeo. Quod, inquit, quamquam voluptatibus quibusdam est saepe iucundius, tamen expetitur propter voluptatem. Scientiam pollicentur, quam non erat mirum sapientiae cupido patria esse cariorem. Non quaeritur autem quid naturae tuae consentaneum sit, sed quid disciplinae. Ita ne hoc quidem modo paria peccata sunt. Ita prorsus, inquam; Nunc ita separantur, ut disiuncta sint, quo nihil potest esse perversius. Virtutibus igitur rectissime mihi videris et ad consuetudinem nostrae orationis.</p>
+<p><em>Neo4j can be substantially faster for certain types of queries because of the benefits gained from index-free adjacency.</em></p>
 
-<p><img src="/images/image-example-4.jpg" alt="Sea" width="1200" height="900" /></p>
+<p><strong>Example: Get the names of destination airports from all flights originating in Wyoming</strong></p>
 
-<p>Defecerit Sed isti ipsi, qui voluptate et dolore omnia metiuntur, nonne clamant sapienti plus semper adesse quod velit quam quod nolit? Quae quidem sapientes sequuntur duce natura tamquam videntes; Quod enim dissolutum sit, id esse sine sensu, quod autem sine sensu. Sunt omnia Longum est enim ad omnia respondere, quae a te dicta sunt. Nam cui proposito sit conservatio sui, necesse est huic partes quoque sui caras suo genere laudabiles servari.</p>
+<h4 id="cypher-neo4j-query-language">Cypher (Neo4j query language):</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>MATCH (hi:Airport {state: 'WY'})-[:HAS_DEPARTURE]-&gt;(fl:Flight)-[:FLIES_TO]-&gt;(ap:Airport)
+</code></pre></div></div>
+<div style="margin-bottom: 40px"></div>
+
+<h4 id="postgres-sql">Postgres SQL:</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>RETURN DISTINCT ap.name
+SELECT name from airports
+JOIN flights ON (airports.iata = flights.destination_airport)
+WHERE flights.origin_airport IN
+(SELECT iata from airports WHERE airports.state = 'WY')
+</code></pre></div></div>
+
+<div style="margin-bottom: 40px"></div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Attempt</th>
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+      <th>Average</th>
+      <th>Logo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Neo4j</strong></td>
+      <td>0.29222047s</td>
+      <td>0.34756797s</td>
+      <td>0.30003158s</td>
+      <td><strong>0.32918392s</strong></td>
+      <td><img src="/images/neo4j.png" alt="neo4j" /></td>
+    </tr>
+    <tr>
+      <td><strong>PostgreSQL</strong></td>
+      <td>2.32982001s</td>
+      <td>2.14832110s</td>
+      <td>2.39080437s</td>
+      <td><strong>2.29873976s</strong></td>
+      <td><img src="/images/postgresql.jpg" alt="PostgreSQL" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="context">Context</h3>
+
+<p>This performance comparison was completed for the final project of my SCS 3252:017 Big Data Management Systems &amp; Tools course (University of Toronto).</p>
+
+<p>There is a PDF and Jupyter notebook investigating how Neo4j can outperform PostgreSQL for large interconnected datasets. See below:</p>
+
+<h3 id="technology-stack">Technology Stack</h3>
+<ul>
+  <li>neo4j</li>
+  <li>PostgreSQL</li>
+  <li>jupyter notebooks</li>
+  <li>Google Colab</li>
+</ul>
+
+<h3 id="links">Links</h3>
+<ul>
+  <li><strong>Project PDF Document:</strong> <a href="https://github.com/kcarmonamurphy/flightly/blob/master/Big%20Data%20Course_%20Comparing%20Neo4j%20with%20PostgreSQL.pdf" target="_blank">Comparing Neo4j with PostgreSQL ⎘</a></li>
+  <li><strong>Jupyter Notebook:</strong> <a href="https://github.com/kcarmonamurphy/flightly/blob/master/Flightly%20Comparing%20Neo4j%20and%20PostgreSQL.ipynb" target="_blank">Flightly Comparing Neo4j and PostgreSQL.ipynb
+ ⎘</a></li>
+  <li><strong>Github:</strong> <a href="https://github.com/kcarmonamurphy/flightly" target="_blank">Github ⎘</a></li>
+</ul>
+
 
   </div>
 
   
   <div class="project__navigation animate">
-    <a class="project__prev" href="/project/mountains">
+    <a class="project__prev" href="/project/traffic-collisions-blue-jays-home-games">
       <div class="project__box">
         <span class="project__nav__info">Next Project</span>
-        <h2 class="project__nav__title">Mountains<i class="ion ion-md-arrow-round-forward arrow-right"></i></h2>
+        <h2 class="project__nav__title">Traffic Collisions after Blue Jays Home Games<i class="ion ion-md-arrow-round-forward arrow-right"></i></h2>
       </div>
     </a>
   </div>

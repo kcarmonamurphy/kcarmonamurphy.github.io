@@ -6,23 +6,23 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Green Plant</title>
+  <title>Traffic Collisions after Blue Jays Home Games</title>
   <meta name='description' content='<p><strong>Senior Software Engineer</strong> with over 8 years of experience. Web App development using <strong>React, Ember.js and Typescript</strong> on the frontend, <strong>Rails, Django and Node.js</strong> on the backend. Believer in thorough <strong>automated tests</strong> and <strong>documentation.</strong></p>'>
 
-  <link rel="canonical" href="http://localhost:6060/project/green-plant">
+  <link rel="canonical" href="http://localhost:6060/project/traffic-collisions-blue-jays-home-games">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Green Plant – Kevin Carmona-Murphy">
-  <meta name="twitter:description" content="In qua quid est boni praeter summam voluptatem, et eam sempiternam? Cur post Tarentum ad Archytam? Qua ex cognitione facilior facta est investigatio rerum occultissimarum. Negat enim tenuissimo victu, id est contemptissimis escis et potionibus, minorem voluptatem.
+  <meta name="twitter:title" content="Traffic Collisions after Blue Jays Home Games – Kevin Carmona-Murphy">
+  <meta name="twitter:description" content="Created: August 2019
 ">
-  <meta name="twitter:image:src" content="http://localhost:6060/images/project-9.jpg">
+  <meta name="twitter:image:src" content="http://localhost:6060/images/blue-jays-player.jpg">
 
   <!-- Facebook OpenGraph -->
-  <meta property="og:title" content="Green Plant – Kevin Carmona-Murphy">
-  <meta property="og:description" content="In qua quid est boni praeter summam voluptatem, et eam sempiternam? Cur post Tarentum ad Archytam? Qua ex cognitione facilior facta est investigatio rerum occultissimarum. Negat enim tenuissimo victu, id est contemptissimis escis et potionibus, minorem voluptatem.
+  <meta property="og:title" content="Traffic Collisions after Blue Jays Home Games – Kevin Carmona-Murphy">
+  <meta property="og:description" content="Created: August 2019
 ">
-  <meta property="og:image" content="http://localhost:6060/images/project-9.jpg">
+  <meta property="og:image" content="http://localhost:6060/images/blue-jays-player.jpg">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
@@ -144,9 +144,9 @@
 
 <div class="container">
   <div class="c-page-heading">
-    <h1 class="c-page-heading__title">Green Plant</h1>
+    <h1 class="c-page-heading__title">Traffic Collisions after Blue Jays Home Games</h1>
     
-      <p class="c-page-heading__description">Photography</p>
+      <p class="c-page-heading__description">Does higher attendance at Blue Jays home games in Toronto translate to more collisions around the Rogers Centre?</p>
     
   </div>
 </div>
@@ -159,7 +159,7 @@
   <div class="row">
     <div class="col col-12">
       <div class="c-page-image animate">
-        <img loading="lazy" src="/images/project-9.jpg" alt="">
+        <img loading="lazy" src="/images/blue-jays-player.jpg" alt="">
       </div>
     </div>
   </div>
@@ -167,18 +167,73 @@
 <!--bookshop-live end-->
 
   <div class="page animate">
-    <p>In qua quid est boni praeter summam voluptatem, et eam sempiternam? Cur post Tarentum ad Archytam? Qua ex cognitione facilior facta est investigatio rerum occultissimarum. Negat enim tenuissimo victu, id est contemptissimis escis et potionibus, minorem voluptatem.</p>
+    <p><strong>Created:</strong> August 2019</p>
 
-<p><img src="/images/image-example-3.jpg" alt="Palm trees" width="1200" height="900" /></p>
+<blockquote>
+  <p>A Data Science Project deliverable for the SCS3250-027 - Introduction to Data Science course @ the University of Toronto (Summer 2019)</p>
+</blockquote>
 
-<p>Praeteritis, inquit, gaudeo. Praeteritis, inquit, gaudeo. Quod, inquit, quamquam voluptatibus quibusdam est saepe iucundius, tamen expetitur propter voluptatem. Scientiam pollicentur, quam non erat mirum sapientiae cupido patria esse cariorem. Non quaeritur autem quid naturae tuae consentaneum sit, sed quid disciplinae. Ita ne hoc quidem modo paria peccata sunt. Ita prorsus, inquam; Nunc ita separantur, ut disiuncta sint, quo nihil potest esse perversius. Virtutibus igitur rectissime mihi videris et ad consuetudinem nostrae orationis.</p>
+<h3 id="table-of-contents">Table of Contents</h3>
+<ol>
+  <li><a href="#hypothesis">Hypothesis</a></li>
+  <li><a href="#datasets">Datasets</a></li>
+  <li><a href="#methodology">Methodology</a></li>
+  <li><a href="#findings">Findings</a></li>
+  <li><a href="#jupyter-notebooks">Jupyter Notebooks</a></li>
+</ol>
 
-<p><img src="/images/image-example-4.jpg" alt="Sea" width="1200" height="900" /></p>
+<h3 id="hypothesis">Hypothesis</h3>
+<p>Does higher attendance at Blue Jays home games in Toronto translate to increased incidences of killed or seriously injured accidents in the immediate vicinity of the Rogers Centre? It turns out the answer isn’t so straightforward. Here I present a basic Data Science analysis of this question using <code class="language-plaintext highlighter-rouge">numpy</code> and <code class="language-plaintext highlighter-rouge">pandas</code> libraries along with a few publicly available data sets.</p>
 
-<p>Defecerit Sed isti ipsi, qui voluptate et dolore omnia metiuntur, nonne clamant sapienti plus semper adesse quod velit quam quod nolit? Quae quidem sapientes sequuntur duce natura tamquam videntes; Quod enim dissolutum sit, id esse sine sensu, quod autem sine sensu. Sunt omnia Longum est enim ad omnia respondere, quae a te dicta sunt. Nam cui proposito sit conservatio sui, necesse est huic partes quoque sui caras suo genere laudabiles servari.</p>
+<h3 id="datasets">Datasets</h3>
+<ol>
+  <li>
+    <p>The Toronto Police Service publishes a <a href="https://data.torontopolice.on.ca/datasets/9f05c21dea4c40458264cb3f1e2362b8_0">Killed and Seriously Injured (KSI)</a> dataset which contains a compilation of all recorded incidents on Toronto roads from the years 2008 to 2018. This datset contains information about what vehicle types were involved in accidents, whether injuries were fatal or non-fatal, locations, and datetimes.</p>
+  </li>
+  <li>
+    <p><a href="https://www.baseball-reference.com/teams/TOR/2018-schedule-scores.shtml">Sports Reference</a> provides us with a historically accurate list of all Toronto Blue Jays regularly scheduled games from the 1980s onwards which includes dates, durations, whether or not the game occured during the day or night, as well as attendance.</p>
+  </li>
+</ol>
+
+<h3 id="methodology">Methodology</h3>
+<p>Using both datasets, I filtered the KSI data using based on two criteria: a) specific time windows after Toronto Blue Jays home games at the Rogers Centre, b) distance from the Rogers Centre. The resulting filtered datasets were then be grouped by attendance quintiles. Dataframes for different values of criteria a) and b) were then created and plotted to attempt to prove or disprove the hypothesis.</p>
+
+<h3 id="findings">Findings</h3>
+
+<h4 id="5-hours-and-5-kilometres">5 hours and 5 kilometres</h4>
+<p><img src="/images/5h5km.png" alt="5 hours x 5 km" /></p>
+<ul>
+  <li>Here we see that the data correlates generally with the stated hyptothesis. As the attendance increases, the number of accidents increases.</li>
+</ul>
+
+<h4 id="5-hours-and-3-kilometres">5 hours and 3 kilometres</h4>
+<p><img src="/images/5h3km.png" alt="5 hours x 3 km" /></p>
+<ul>
+  <li>Reducing the radius from the Rogers Centre, an interesting trend emerges only for games with high attendance. It seems that the number of accidents drops. This is likely due to so much traffic flooding the nearby streets and causing so much congestion that the roads become safer.</li>
+</ul>
+
+<h4 id="2-hours-and-3-kilometres">2 hours and 3 kilometres</h4>
+<p><img src="/images/2h3km.png" alt="2 hours x 3 km" /></p>
+<ul>
+  <li>Reducing the time window after games shows the opposite trend from the first graph and correctly predicts our assumptions about why the second graph trend behaves the way it does.</li>
+</ul>
+
+<h3 id="jupyter-notebooks">Jupyter Notebooks</h3>
+<p>1) Part 1 - <a href="https://github.com/kcarmonamurphy/blue-jays-home-games/blob/master/Part%202%20-%20Analyse%20KSI%20%26%20Draw%20Conclusions.ipynb">Prepare Blue Jays Data Set</a> </p>
+
+<p>2) Part 2 - <a href="https://github.com/kcarmonamurphy/blue-jays-home-games/blob/master/Part%201%20-%20Prepare%20Blue%20Jays%20Data%20Set.ipynb">Analyse KSI &amp; Draw Conclusions</a></p>
 
   </div>
 
+  
+  <div class="project__navigation animate">
+    <a class="project__prev" href="/project/photo-app">
+      <div class="project__box">
+        <span class="project__nav__info">Next Project</span>
+        <h2 class="project__nav__title">Databaseless Digital Photo Album<i class="ion ion-md-arrow-round-forward arrow-right"></i></h2>
+      </div>
+    </a>
+  </div>
   
 
 </div>
