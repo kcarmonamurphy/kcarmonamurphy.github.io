@@ -7,21 +7,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Databaseless Digital Photo Album</title>
-  <meta name='description' content='<p><strong>Senior Software Engineer</strong> with over 8 years of experience. Web App development using <strong>React, Ember.js and Typescript</strong> on the frontend, <strong>Rails, Django and Node.js</strong> on the backend. Believer in thorough <strong>automated tests</strong> and <strong>documentation.</strong></p>'>
+  <meta name='description' content='A way to avoid vendor-lockin by organizing photos and videos using folders and EXIF metadata'>
 
-  <link rel="canonical" href="http://localhost:6060/project/photo-app">
+  <link rel="canonical" href="http://localhost:6060/blog/photo-app">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Databaseless Digital Photo Album – Kevin Carmona-Murphy">
-  <meta name="twitter:description" content="Created: February 2018
-">
+  <meta name="twitter:description" content="A way to avoid vendor-lockin by organizing photos and videos using folders and EXIF metadata">
   <meta name="twitter:image:src" content="http://localhost:6060/images/photo-album.jpg">
 
   <!-- Facebook OpenGraph -->
   <meta property="og:title" content="Databaseless Digital Photo Album – Kevin Carmona-Murphy">
-  <meta property="og:description" content="Created: February 2018
-">
+  <meta property="og:description" content="A way to avoid vendor-lockin by organizing photos and videos using folders and EXIF metadata">
   <meta property="og:image" content="http://localhost:6060/images/photo-album.jpg">
 
   <!-- Fonts -->
@@ -137,37 +135,48 @@
 </header>
 <!-- end header -->
 
-    <div class="container">
+    <div class="post-top">
+  <div class="container">
+    <div class="row">
 
-  <!--bookshop-live meta(version="3.9.0" baseurl="" title="Kevin Carmona-Murphy") -->
-<!--bookshop-live name(page-heading/page-heading.jekyll.html) params(title=page.title description=page.subtitle) context() -->
+      
+      <div class="col col-6 col-d-12">
+        <div class="post-image">
+          <img loading="lazy" src="/images/photo-album.jpg" alt="Databaseless Digital Photo Album">
+        </div>
+      </div>
+      
 
-<div class="container">
-  <div class="c-page-heading">
-    <h1 class="c-page-heading__title">Databaseless Digital Photo Album</h1>
-    
-      <p class="c-page-heading__description">A way to avoid vendor-lockin by organizing photos and videos using folders and EXIF metadata</p>
-    
-  </div>
-</div>
-<!--bookshop-live end-->
-  
-  <!--bookshop-live meta(version="3.9.0" baseurl="" title="Kevin Carmona-Murphy") -->
-<!--bookshop-live name(page-image/page-image.jekyll.html) params(image=page_image) context() -->
+      <div class="col col-6 col-d-12">
+        <div class="post__info">
 
-<div class="container">
-  <div class="row">
-    <div class="col col-12">
-      <div class="c-page-image animate">
-        <img loading="lazy" src="/images/photo-album.jpg" alt="">
+          
+          <div class="post-tags">
+            
+              <a href="/tag/databaseless" class="post-tags__tag">Databaseless</a>
+            
+              <a href="/tag/metadata" class="post-tags__tag">Metadata</a>
+            
+              <a href="/tag/exif" class="post-tags__tag">EXIF</a>
+            
+          </div>
+          
+
+
+          <h1 class="post__title">Databaseless Digital Photo Album</h1>
+        </div>
       </div>
     </div>
   </div>
 </div>
-<!--bookshop-live end-->
 
-  <div class="page animate">
-    <p><strong>Created:</strong> February 2018</p>
+<!-- begin post -->
+<div class="container animate">
+
+  <article class="post">
+
+    <div class="post__content">
+      <p><strong>Created:</strong> February 2018</p>
 
 <h3 id="description">Description</h3>
 
@@ -191,7 +200,7 @@
 
 <h3 id="tech-stack">Tech Stack</h3>
 
-<p>Any backend framework could be used either as an API only server or with built-in front-end layer. An ideal scenario would be a frontend microservice running a highly optimzed web app in a modern JS framework like React or Ember.js, with a backend using a framework designed for performance. A database capable of storing image thumbnails and supporting arbitrary relationships would be necessary to support mirroring an operating system file system.</p>
+<p>Any backend framework could be used either as an API only server or with built-in front-end layer. An ideal scenario would be a frontend microservice running a highly optimzed web app in a modern JS framework like React or Ember.js, with a backend using a framework designed for performance. A database capable of storing image thumbnails and supporting arbitrary relationships would be necessary to support mirroring the file and folder architecture of an operating system, since this doesn’t follow a strict schema.</p>
 
 <h3 id="unfinished-implementations">Unfinished Implementations</h3>
 
@@ -201,59 +210,161 @@
   <li><strong>Photon (Ember frontend for Photonest):</strong> <a href="https://github.com/kcarmonamurphy/photon" target="_blank">https://github.com/kcarmonamurphy/photon ⎘</a></li>
 </ul>
 
-  </div>
+    </div>
 
-  
-  <div class="project__navigation animate">
-    <a class="project__prev" href="/project/multi-translator">
-      <div class="project__box">
-        <span class="project__nav__info">Next Project</span>
-        <h2 class="project__nav__title">Multi-translator app using Angular.js<i class="ion ion-md-arrow-round-forward arrow-right"></i></h2>
-      </div>
-    </a>
+    <div class="post__share">
+  <div class="share__head">
+    <div class="share__title">Share this Post</div>
   </div>
-  
-
+  <ul class="share__list list-reset">
+    <li class="share__item">
+      <a class="share__link share__twitter"
+        href="https://twitter.com/intent/tweet?text=Databaseless%20Digital%20Photo%20Album&url=http://localhost:6060/blog/photo-app"
+        onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+        title="Share on Twitter" rel="nofollow"><i class="ion ion-logo-twitter"></i></a>
+    </li>
+    <li class="share__item">
+      <a class="share__link share__facebook"
+        href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:6060/blog/photo-app"
+        onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+        title="Share on Facebook" rel="nofollow"><i class="ion ion-logo-facebook"></i></a>
+    </li>
+    <li class="share__item">
+      <a class="share__link share__pinterest"
+        href="http://pinterest.com/pin/create/button/?url=http://localhost:6060/blog/photo-app&amp;media=http://localhost:6060/images/photo-album.jpg&amp;description=Databaseless%20Digital%20Photo%20Album"
+        onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;"
+        title="Share on Pinterest" rel="nofollow"><i class="ion ion-logo-pinterest"></i></a>
+    </li>
+    <li class="share__item">
+      <a class="share__link share__linkedin"
+        href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:6060/blog/photo-app&title=Databaseless%20Digital%20Photo%20Album&summary=A%20way%20to%20avoid%20vendor-lockin%20by%20organizing%20photos%20and%20videos%20using%20folders%20and%20EXIF%20metadata&source=Kevin%20Carmona-Murphy"
+        onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+        title="Share on LinkedIn" rel="nofollow"><i class="ion ion-logo-linkedin"></i></a>
+    </li>
+  </ul>
 </div>
 
-<!--bookshop-live meta(version="3.9.0" baseurl="" title="Kevin Carmona-Murphy") -->
-<!--bookshop-live name(newsletter/newsletter.jekyll.html) params(newsletter_title=site.data.newsletter.newsletter_title
-  newsletter_description=site.data.newsletter.newsletter_description
-  newsletter_identifier=site.data.newsletter.newsletter_identifier
-  newsletter_button=site.data.newsletter.newsletter_button) context() -->
-<!-- begin subscribe -->
+  </article>
+</div>
+<!-- end post -->
 
-<section class="c-subscribe section">
-  <div class="container">
+<div class="container">
+  <div class="row">
+    <div class="col col-10 col-d-12 push-d-0 push-1">
+      <div class="post__navigation animate">
+  
+  <a class="post__prev" href="/blog/multi-translator">
+    <div class="prev__image">
+      <img loading="lazy" src="/images/translation.jpg" alt="Databaseless Digital Photo Album">
+    </div>
+    <div class="prev__box">
+      <span class="post__nav post__nav__prev">Prev post</span>
+      <h2 class="post__nav__title">Multi-translator app using Angular.js</h2>
+    </div>
+  </a>
+  
+
+  
+  <a class="post__next" href="/blog/traffic-collisions-blue-jays-home-games">
+    <div class="next__box">
+      <span class="post__nav post__nav__next">Next post</span>
+      <h2 class="post__nav__title">Traffic Collisions after Blue Jays Home Games</h2>
+    </div>
+    <div class="next__image">
+      <img loading="lazy" src="/images/blue-jays-player.jpg" alt="Databaseless Digital Photo Album">
+    </div>
+  </a>
+  
+</div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+<!-- begin related posts -->
+<div class="container">
+  <section class="related-posts  animate">
     <div class="row">
       <div class="col col-12">
-
-        <div class="c-subscribe__inner">
-          <div class="c-subscribe__info">
-            <h3 class="c-subscribe__title">Join my mailing list</h3>
-            <div class="c-subscribe__subtitle">
-              <span id="ityped"></span>
+        <div class="container__inner">
+          <div class="section__info">
+            <div class="section__head">
+              <h2 class="section__title">You may also like</h2>
+              <a class="section__link" href="/blog">
+                
+                
+                  
+                    <a href="/tags#Databaseless" class="section__link related-tag">See all<span> Databaseless</span> <i class="ion ion-md-arrow-forward"></i></a>
+                  
+                
+                  
+                
+                  
+                
+              
+              </a>
             </div>
           </div>
+          <div class="row">
 
-          <form class="c-subscribe__form validate" action="//frnla.us6.list-manage.com/subscribe/post?u=6314d69a3f315af7ce3fb00a0&amp;id=3038727cc3"
-            method="POST" id="membedded-subscribe-form" name="membedded-subscribe-form" target="_blank" novalidate>
-            <label class="screen-reader-text" for="mce-EMAIL">Email address</label>
-            <input class="c-subscribe__form-email required email" id="mce-EMAIL" type="text" name="EMAIL" placeholder="Your email address">
-            <button class="c-button c-button--primary c-button--large" id="membedded-subscribe" type="submit" name="subscribe">Subscribe</button>
-          </form>
-
+          
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-<!-- end subscribe -->
+  </section>
+</div>
+<!-- end related posts -->
 
-<script>
-  var itype_text = ['Get inspiration, updates and, cool stuff!'];
-</script>
-<!--bookshop-live end-->
+
+
 
     <!--
         Bookshop components are accessed using the bookshop tag,

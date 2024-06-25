@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>To-Do with React Hooks & Express.js</title>
+  <meta name='description' content='A proof of concept for a React, Express.js, Sequelize ORM and styled-components stack'>
+
+  <link rel="canonical" href="http://localhost:6060/blog/react-todo">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="To-Do with React Hooks & Express.js – Kevin Carmona-Murphy">
+  <meta name="twitter:description" content="A proof of concept for a React, Express.js, Sequelize ORM and styled-components stack">
+  <meta name="twitter:image:src" content="http://localhost:6060/images/todo.jpg">
+
+  <!-- Facebook OpenGraph -->
+  <meta property="og:title" content="To-Do with React Hooks & Express.js – Kevin Carmona-Murphy">
+  <meta property="og:description" content="A proof of concept for a React, Express.js, Sequelize ORM and styled-components stack">
+  <meta property="og:image" content="http://localhost:6060/images/todo.jpg">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+
+  <!-- Ionicons -->
+  <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="/assets/main.css">
+</head>
+
+<body>
+
+    
+
+    <!-- begin header -->
+<header class="c-header">
+  <div class="container">
+    <div class="row">
+      <div class="c-header__inner">
+
+        <div class="logo">
+          <a class="logo__link" href="/">
+          
+            <img class="logo__image" src="/images/logo.png" alt="Kevin Carmona-Murphy">
+          
+          </a>
+        </div>
+
+        <nav class="main-nav">
+          <div class="main-nav__box">
+
+            <div class="nav__icon-close">
+              <i class="ion ion-md-close"></i>
+            </div>
+
+            <div class="nav__title">Menu</div>
+
+              <ul class="nav__list list-reset">
+
+              
+                
+                <li class="nav__item">
+                  <a href="/" class="nav__link">Home</a>
+                </li>
+                
+              
+                
+                <li class="nav__item">
+                  <a href="/projects/" class="nav__link">Projects</a>
+                </li>
+                
+              
+                
+                <li class="nav__item">
+                  <a href="/blog/" class="nav__link">Blog</a>
+                </li>
+                
+              
+                
+                <li class="nav__item dropdown">
+                  <span class="nav__link dropdown-toggle">Pages <i class="ion ion-ios-arrow-down arrow-down"></i></span>
+                  <div class="dropdown-menu">
+                    
+                      <a href="/about/" class="nav__link">About</a>
+                    
+                      <a href="/elements/" class="nav__link">Elements</a>
+                    
+                  </div>
+                </li>
+
+                
+              
+
+            </ul>
+          </div>
+
+          <!--bookshop-live meta(version="3.9.0" baseurl="" title="Kevin Carmona-Murphy") -->
+<!--bookshop-live name(social-link.jekyll.html) params() context() -->
+
+<div class="social">
+  <ul class="social__list list-reset">
+    
+    <li class="social__item">
+      <a class="social__link" href="https://twitter.com" target="_blank" rel="noopener" aria-label="twitter icon"><i class="ion ion-logo-twitter"></i></a>
+    </li>
+    
+    <li class="social__item">
+      <a class="social__link" href="https://github.com" target="_blank" rel="noopener" aria-label="github icon"><i class="ion ion-logo-github"></i></a>
+    </li>
+    
+    <li class="social__item">
+      <a class="social__link" href="https://pinterest.com" target="_blank" rel="noopener" aria-label="pinterest icon"><i class="ion ion-logo-pinterest"></i></a>
+    </li>
+    
+    <li class="social__item">
+      <a class="social__link" href="https://youtube.com" target="_blank" rel="noopener" aria-label="youtube icon"><i class="ion ion-logo-youtube"></i></a>
+    </li>
+    
+  </ul>
+</div>
+
+<!--bookshop-live end-->
+        </nav>
+
+        <div class="nav-button">
+          <i class="nav__icon nav__icon-menu ion ion-md-menu"></i>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</header>
+<!-- end header -->
+
+    <div class="post-top">
+  <div class="container">
+    <div class="row">
+
+      
+      <div class="col col-6 col-d-12">
+        <div class="post-image">
+          <img loading="lazy" src="/images/todo.jpg" alt="To-Do with React Hooks & Express.js">
+        </div>
+      </div>
+      
+
+      <div class="col col-6 col-d-12">
+        <div class="post__info">
+
+          
+          <div class="post-tags">
+            
+              <a href="/tag/react" class="post-tags__tag">React</a>
+            
+              <a href="/tag/express.js" class="post-tags__tag">Express.js</a>
+            
+              <a href="/tag/sequelize" class="post-tags__tag">Sequelize</a>
+            
+          </div>
+          
+
+
+          <h1 class="post__title">To-Do with React Hooks &amp; Express.js</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- begin post -->
+<div class="container animate">
+
+  <article class="post">
+
+    <div class="post__content">
+      <p><strong>Created:</strong> March 2022</p>
+
+<p>This is a simple app that I developed as a proof of concept for the following stack:</p>
+
+<ul>
+  <li>React</li>
+  <li>Express.js,</li>
+  <li>Sequelize ORM</li>
+  <li>Styled Components</li>
+</ul>
+
+<p>It was bootstrapped using Create React App.</p>
+
+<ul>
+  <li><strong>Github:</strong> <a href="https://github.com/kcarmonamurphy/react-todo" target="_blank">https://github.com/kcarmonamurphy/react-todo ⎘</a></li>
+</ul>
+
+<p><img src="/images/todo-animation.gif" alt="Todo Animation" /></p>
+
+    </div>
+
+    <div class="post__share">
+  <div class="share__head">
+    <div class="share__title">Share this Post</div>
+  </div>
+  <ul class="share__list list-reset">
+    <li class="share__item">
+      <a class="share__link share__twitter"
+        href="https://twitter.com/intent/tweet?text=To-Do%20with%20React%20Hooks%20&%20Express.js&url=http://localhost:6060/blog/react-todo"
+        onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+        title="Share on Twitter" rel="nofollow"><i class="ion ion-logo-twitter"></i></a>
+    </li>
+    <li class="share__item">
+      <a class="share__link share__facebook"
+        href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:6060/blog/react-todo"
+        onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+        title="Share on Facebook" rel="nofollow"><i class="ion ion-logo-facebook"></i></a>
+    </li>
+    <li class="share__item">
+      <a class="share__link share__pinterest"
+        href="http://pinterest.com/pin/create/button/?url=http://localhost:6060/blog/react-todo&amp;media=http://localhost:6060/images/todo.jpg&amp;description=To-Do%20with%20React%20Hooks%20&%20Express.js"
+        onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;"
+        title="Share on Pinterest" rel="nofollow"><i class="ion ion-logo-pinterest"></i></a>
+    </li>
+    <li class="share__item">
+      <a class="share__link share__linkedin"
+        href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:6060/blog/react-todo&title=To-Do%20with%20React%20Hooks%20&%20Express.js&summary=A%20proof%20of%20concept%20for%20a%20React,%20Express.js,%20Sequelize%20ORM%20and%20styled-components%20stack&source=Kevin%20Carmona-Murphy"
+        onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+        title="Share on LinkedIn" rel="nofollow"><i class="ion ion-logo-linkedin"></i></a>
+    </li>
+  </ul>
+</div>
+
+  </article>
+</div>
+<!-- end post -->
+
+<div class="container">
+  <div class="row">
+    <div class="col col-10 col-d-12 push-d-0 push-1">
+      <div class="post__navigation animate">
+  
+  <a class="post__prev" href="/blog/vaxpass-resizer">
+    <div class="prev__image">
+      <img loading="lazy" src="/images/covid19.jpg" alt="To-Do with React Hooks & Express.js">
+    </div>
+    <div class="prev__box">
+      <span class="post__nav post__nav__prev">Prev post</span>
+      <h2 class="post__nav__title">Vaxpass Resizer</h2>
+    </div>
+  </a>
+  
+
+  
+</div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+<!-- begin related posts -->
+<div class="container">
+  <section class="related-posts  animate">
+    <div class="row">
+      <div class="col col-12">
+        <div class="container__inner">
+          <div class="section__info">
+            <div class="section__head">
+              <h2 class="section__title">You may also like</h2>
+              <a class="section__link" href="/blog">
+                
+                
+                  
+                    <a href="/tags#React" class="section__link related-tag">See all<span> React</span> <i class="ion ion-md-arrow-forward"></i></a>
+                  
+                
+                  
+                
+                  
+                
+              
+              </a>
+            </div>
+          </div>
+          <div class="row">
+
+          
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<!-- end related posts -->
+
+
+
+
+    <!--
+        Bookshop components are accessed using the bookshop tag,
+        using the same syntax as the standard Jekyll include tag.
+    -->
+    <!--bookshop-live meta(version="3.9.0" baseurl="" title="Kevin Carmona-Murphy") -->
+<!--bookshop-live name(page.jekyll.html) params(content_blocks=page.content_blocks page_theme=page.page_theme) context() -->
+
+<!--bookshop-live end-->
+
+    <div class="top" title="Top"><i class="ion ion-ios-arrow-up"></i></div>
+
+    <!-- begin footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col col-12">
+
+        <!--bookshop-live meta(version="3.9.0" baseurl="" title="Kevin Carmona-Murphy") -->
+<!--bookshop-live name(social-link.jekyll.html) params() context() -->
+
+<div class="social">
+  <ul class="social__list list-reset">
+    
+    <li class="social__item">
+      <a class="social__link" href="https://twitter.com" target="_blank" rel="noopener" aria-label="twitter icon"><i class="ion ion-logo-twitter"></i></a>
+    </li>
+    
+    <li class="social__item">
+      <a class="social__link" href="https://github.com" target="_blank" rel="noopener" aria-label="github icon"><i class="ion ion-logo-github"></i></a>
+    </li>
+    
+    <li class="social__item">
+      <a class="social__link" href="https://pinterest.com" target="_blank" rel="noopener" aria-label="pinterest icon"><i class="ion ion-logo-pinterest"></i></a>
+    </li>
+    
+    <li class="social__item">
+      <a class="social__link" href="https://youtube.com" target="_blank" rel="noopener" aria-label="youtube icon"><i class="ion ion-logo-youtube"></i></a>
+    </li>
+    
+  </ul>
+</div>
+
+<!--bookshop-live end-->
+
+        <ul class="footer_nav list-reset">
+          
+          <li class="footer_nav__item">
+            <a href="/" class="footer_nav__link">Home</a>
+          </li>
+          
+          <li class="footer_nav__item">
+            <a href="/projects/" class="footer_nav__link">Projects</a>
+          </li>
+          
+          <li class="footer_nav__item">
+            <a href="/elements/" class="footer_nav__link">Elements</a>
+          </li>
+          
+          <li class="footer_nav__item">
+            <a href="/about/" class="footer_nav__link">About</a>
+          </li>
+          
+          <li class="footer_nav__item">
+            <a href="/blog/" class="footer_nav__link">Blog</a>
+          </li>
+          
+        </ul>
+
+        <div class="copyright"><p> 2021 &copy; <a href="/">Vonge</a>. Template by <a href="https://cloudcannon.com/">CloudCannon</a>.</p></div>
+
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- end footer -->
+
+    <script src="/js/scripts.js"></script>
+    <script src="/js/common.js"></script>
+</body>
+</html>

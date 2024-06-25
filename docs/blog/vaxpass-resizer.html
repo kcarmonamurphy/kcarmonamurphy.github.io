@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Vaxpass Resizer</title>
+  <meta name='description' content='Create wallet-sized and passport-sized versions of the Canadian Enhanced Vaccine Certificate'>
+
+  <link rel="canonical" href="http://localhost:6060/blog/vaxpass-resizer">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Vaxpass Resizer – Kevin Carmona-Murphy">
+  <meta name="twitter:description" content="Create wallet-sized and passport-sized versions of the Canadian Enhanced Vaccine Certificate">
+  <meta name="twitter:image:src" content="http://localhost:6060/images/covid19.jpg">
+
+  <!-- Facebook OpenGraph -->
+  <meta property="og:title" content="Vaxpass Resizer – Kevin Carmona-Murphy">
+  <meta property="og:description" content="Create wallet-sized and passport-sized versions of the Canadian Enhanced Vaccine Certificate">
+  <meta property="og:image" content="http://localhost:6060/images/covid19.jpg">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+
+  <!-- Ionicons -->
+  <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="/assets/main.css">
+</head>
+
+<body>
+
+    
+
+    <!-- begin header -->
+<header class="c-header">
+  <div class="container">
+    <div class="row">
+      <div class="c-header__inner">
+
+        <div class="logo">
+          <a class="logo__link" href="/">
+          
+            <img class="logo__image" src="/images/logo.png" alt="Kevin Carmona-Murphy">
+          
+          </a>
+        </div>
+
+        <nav class="main-nav">
+          <div class="main-nav__box">
+
+            <div class="nav__icon-close">
+              <i class="ion ion-md-close"></i>
+            </div>
+
+            <div class="nav__title">Menu</div>
+
+              <ul class="nav__list list-reset">
+
+              
+                
+                <li class="nav__item">
+                  <a href="/" class="nav__link">Home</a>
+                </li>
+                
+              
+                
+                <li class="nav__item">
+                  <a href="/projects/" class="nav__link">Projects</a>
+                </li>
+                
+              
+                
+                <li class="nav__item">
+                  <a href="/blog/" class="nav__link">Blog</a>
+                </li>
+                
+              
+                
+                <li class="nav__item dropdown">
+                  <span class="nav__link dropdown-toggle">Pages <i class="ion ion-ios-arrow-down arrow-down"></i></span>
+                  <div class="dropdown-menu">
+                    
+                      <a href="/about/" class="nav__link">About</a>
+                    
+                      <a href="/elements/" class="nav__link">Elements</a>
+                    
+                  </div>
+                </li>
+
+                
+              
+
+            </ul>
+          </div>
+
+          <!--bookshop-live meta(version="3.9.0" baseurl="" title="Kevin Carmona-Murphy") -->
+<!--bookshop-live name(social-link.jekyll.html) params() context() -->
+
+<div class="social">
+  <ul class="social__list list-reset">
+    
+    <li class="social__item">
+      <a class="social__link" href="https://twitter.com" target="_blank" rel="noopener" aria-label="twitter icon"><i class="ion ion-logo-twitter"></i></a>
+    </li>
+    
+    <li class="social__item">
+      <a class="social__link" href="https://github.com" target="_blank" rel="noopener" aria-label="github icon"><i class="ion ion-logo-github"></i></a>
+    </li>
+    
+    <li class="social__item">
+      <a class="social__link" href="https://pinterest.com" target="_blank" rel="noopener" aria-label="pinterest icon"><i class="ion ion-logo-pinterest"></i></a>
+    </li>
+    
+    <li class="social__item">
+      <a class="social__link" href="https://youtube.com" target="_blank" rel="noopener" aria-label="youtube icon"><i class="ion ion-logo-youtube"></i></a>
+    </li>
+    
+  </ul>
+</div>
+
+<!--bookshop-live end-->
+        </nav>
+
+        <div class="nav-button">
+          <i class="nav__icon nav__icon-menu ion ion-md-menu"></i>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</header>
+<!-- end header -->
+
+    <div class="post-top">
+  <div class="container">
+    <div class="row">
+
+      
+      <div class="col col-6 col-d-12">
+        <div class="post-image">
+          <img loading="lazy" src="/images/covid19.jpg" alt="Vaxpass Resizer">
+        </div>
+      </div>
+      
+
+      <div class="col col-6 col-d-12">
+        <div class="post__info">
+
+          
+          <div class="post-tags">
+            
+              <a href="/tag/pdflib" class="post-tags__tag">PDFLib</a>
+            
+          </div>
+          
+
+
+          <h1 class="post__title">Vaxpass Resizer</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- begin post -->
+<div class="container animate">
+
+  <article class="post">
+
+    <div class="post__content">
+      <p><strong>Created:</strong> December 2021</p>
+
+<h3 id="description">Description</h3>
+
+<p>This is a utility that allows a user to upload a PDF of their vaccine passport and shrinks it down to passport and credit card sized dimensions.</p>
+
+<p>The resulting outputted PDF contains the shrunken versions along with rulers on the edges to verify proper sizing and also to indicate where to cut and fold so that they can fit snugly within a passport cover or in the credit card slot of a wallet.</p>
+
+<h3 id="context">Context</h3>
+
+<p>In October of 2021, the Canadian Government rolled out the standardized Enhanced Vaccine Passport which became an important document for anyone wishing to travel abroad during the Covid-19 Pandemic.</p>
+
+<h3 id="technology-stack">Technology Stack</h3>
+<ul>
+  <li>Vanilla JS</li>
+  <li>
+    <p>PDFLib</p>
+  </li>
+  <li><strong>Demo:</strong> <a href="https://kcarmonamurphy.github.io/vaxpass-resizer/" target="_blank">https://kcarmonamurphy.github.io/vaxpass-resizer/ ⎘</a></li>
+  <li><strong>Github:</strong> <a href="https://github.com/kcarmonamurphy/vaxpass-resizer" target="_blank">https://github.com/kcarmonamurphy/vaxpass-resizer ⎘</a></li>
+</ul>
+
+<p><img src="/images/vaxpass-resizer.gif" alt="The Vaxpass Resizer utility in action" /></p>
+
+    </div>
+
+    <div class="post__share">
+  <div class="share__head">
+    <div class="share__title">Share this Post</div>
+  </div>
+  <ul class="share__list list-reset">
+    <li class="share__item">
+      <a class="share__link share__twitter"
+        href="https://twitter.com/intent/tweet?text=Vaxpass%20Resizer&url=http://localhost:6060/blog/vaxpass-resizer"
+        onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+        title="Share on Twitter" rel="nofollow"><i class="ion ion-logo-twitter"></i></a>
+    </li>
+    <li class="share__item">
+      <a class="share__link share__facebook"
+        href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:6060/blog/vaxpass-resizer"
+        onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+        title="Share on Facebook" rel="nofollow"><i class="ion ion-logo-facebook"></i></a>
+    </li>
+    <li class="share__item">
+      <a class="share__link share__pinterest"
+        href="http://pinterest.com/pin/create/button/?url=http://localhost:6060/blog/vaxpass-resizer&amp;media=http://localhost:6060/images/covid19.jpg&amp;description=Vaxpass%20Resizer"
+        onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;"
+        title="Share on Pinterest" rel="nofollow"><i class="ion ion-logo-pinterest"></i></a>
+    </li>
+    <li class="share__item">
+      <a class="share__link share__linkedin"
+        href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:6060/blog/vaxpass-resizer&title=Vaxpass%20Resizer&summary=Create%20wallet-sized%20and%20passport-sized%20versions%20of%20the%20Canadian%20Enhanced%20Vaccine%20Certificate&source=Kevin%20Carmona-Murphy"
+        onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+        title="Share on LinkedIn" rel="nofollow"><i class="ion ion-logo-linkedin"></i></a>
+    </li>
+  </ul>
+</div>
+
+  </article>
+</div>
+<!-- end post -->
+
+<div class="container">
+  <div class="row">
+    <div class="col col-10 col-d-12 push-d-0 push-1">
+      <div class="post__navigation animate">
+  
+  <a class="post__prev" href="/blog/neo4j-vs-postgresql">
+    <div class="prev__image">
+      <img loading="lazy" src="/images/airplane.jpg" alt="Vaxpass Resizer">
+    </div>
+    <div class="prev__box">
+      <span class="post__nav post__nav__prev">Prev post</span>
+      <h2 class="post__nav__title">Neo4j vs PostgreSQL</h2>
+    </div>
+  </a>
+  
+
+  
+  <a class="post__next" href="/blog/react-todo">
+    <div class="next__box">
+      <span class="post__nav post__nav__next">Next post</span>
+      <h2 class="post__nav__title">To-Do with React Hooks & Express.js</h2>
+    </div>
+    <div class="next__image">
+      <img loading="lazy" src="/images/todo.jpg" alt="Vaxpass Resizer">
+    </div>
+  </a>
+  
+</div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+<!-- begin related posts -->
+<div class="container">
+  <section class="related-posts  animate">
+    <div class="row">
+      <div class="col col-12">
+        <div class="container__inner">
+          <div class="section__info">
+            <div class="section__head">
+              <h2 class="section__title">You may also like</h2>
+              <a class="section__link" href="/blog">
+                
+                
+                  
+                    <a href="/tags#PDFLib" class="section__link related-tag">See all<span> PDFLib</span> <i class="ion ion-md-arrow-forward"></i></a>
+                  
+                
+              
+              </a>
+            </div>
+          </div>
+          <div class="row">
+
+          
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<!-- end related posts -->
+
+
+
+
+    <!--
+        Bookshop components are accessed using the bookshop tag,
+        using the same syntax as the standard Jekyll include tag.
+    -->
+    <!--bookshop-live meta(version="3.9.0" baseurl="" title="Kevin Carmona-Murphy") -->
+<!--bookshop-live name(page.jekyll.html) params(content_blocks=page.content_blocks page_theme=page.page_theme) context() -->
+
+<!--bookshop-live end-->
+
+    <div class="top" title="Top"><i class="ion ion-ios-arrow-up"></i></div>
+
+    <!-- begin footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col col-12">
+
+        <!--bookshop-live meta(version="3.9.0" baseurl="" title="Kevin Carmona-Murphy") -->
+<!--bookshop-live name(social-link.jekyll.html) params() context() -->
+
+<div class="social">
+  <ul class="social__list list-reset">
+    
+    <li class="social__item">
+      <a class="social__link" href="https://twitter.com" target="_blank" rel="noopener" aria-label="twitter icon"><i class="ion ion-logo-twitter"></i></a>
+    </li>
+    
+    <li class="social__item">
+      <a class="social__link" href="https://github.com" target="_blank" rel="noopener" aria-label="github icon"><i class="ion ion-logo-github"></i></a>
+    </li>
+    
+    <li class="social__item">
+      <a class="social__link" href="https://pinterest.com" target="_blank" rel="noopener" aria-label="pinterest icon"><i class="ion ion-logo-pinterest"></i></a>
+    </li>
+    
+    <li class="social__item">
+      <a class="social__link" href="https://youtube.com" target="_blank" rel="noopener" aria-label="youtube icon"><i class="ion ion-logo-youtube"></i></a>
+    </li>
+    
+  </ul>
+</div>
+
+<!--bookshop-live end-->
+
+        <ul class="footer_nav list-reset">
+          
+          <li class="footer_nav__item">
+            <a href="/" class="footer_nav__link">Home</a>
+          </li>
+          
+          <li class="footer_nav__item">
+            <a href="/projects/" class="footer_nav__link">Projects</a>
+          </li>
+          
+          <li class="footer_nav__item">
+            <a href="/elements/" class="footer_nav__link">Elements</a>
+          </li>
+          
+          <li class="footer_nav__item">
+            <a href="/about/" class="footer_nav__link">About</a>
+          </li>
+          
+          <li class="footer_nav__item">
+            <a href="/blog/" class="footer_nav__link">Blog</a>
+          </li>
+          
+        </ul>
+
+        <div class="copyright"><p> 2021 &copy; <a href="/">Vonge</a>. Template by <a href="https://cloudcannon.com/">CloudCannon</a>.</p></div>
+
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- end footer -->
+
+    <script src="/js/scripts.js"></script>
+    <script src="/js/common.js"></script>
+</body>
+</html>
