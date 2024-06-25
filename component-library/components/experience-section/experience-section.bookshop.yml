@@ -2,8 +2,8 @@
 spec:
   structures:
     - content_blocks
-  label: Projects
-  description: Projects Section with heading, a description and a link
+  label: Experience
+  description: Experience Section with heading, a description and a link
   icon: wysiwyg
   tags:
     - Content
@@ -13,14 +13,14 @@ blueprint:
   title: ""
   description_html: ""
   link_url: ""
-  show_projects: true
+  show_experience: true
 
 # Overrides any fields in the blueprint when viewing this component in the component browser
 preview:
   title: Latest Works
   description_html: I show only my best works built completely with passion,
     simplicity, and creativity!
-  link_url: /projects
+  link_url: /experience
 
 # Any extra CloudCannon inputs configuration to apply to the blueprint
 _inputs: {}

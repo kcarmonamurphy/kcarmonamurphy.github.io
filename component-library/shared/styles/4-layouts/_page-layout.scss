@@ -1,4 +1,4 @@
-/* Page + Post + Project */
+/* Page + Post + Experience */
 .post-top,
 .page-top {
 	padding: 96px 0 48px;
@@ -427,8 +427,8 @@
 	}
 }
 
-/* Project */
-.project-subtitle {
+/* Experience */
+.experience-subtitle {
 	margin: 20px 0 0;
 	font-size: 21px;
 	line-height: 1;
@@ -440,8 +440,8 @@
 	}
 }
 
-/* Project Navigation */
-.project__navigation {
+/* experience Navigation */
+.experience__navigation {
 	max-width: 780px;
 	margin: 80px auto 40px;
 	text-align: center;
@@ -451,18 +451,18 @@
 	}
 }
 
-.project__prev {
+.experience__prev {
 	&:hover {
 		color: $text-color;
 
-		.project__nav__title .arrow-right {
+		.experience__nav__title .arrow-right {
 			opacity: 1;
 			transform: translateX(3px);
 		}
 	}
 }
 
-.project__nav__info {
+.experience__nav__info {
 	display: inline-block;
 	margin: 0 20px 4px 0;
 	font-size: 12px;
@@ -471,7 +471,7 @@
 	text-transform: uppercase;
 }
 
-.project__nav__title {
+.experience__nav__title {
 	margin-bottom: 20px;
 	font-size: 40px;
 	line-height: 1.2;

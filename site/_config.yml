@@ -23,9 +23,9 @@ collections:
   pages:
     output: true
     permalink: /:title/
-  projects:
+  experience:
     output: true
-    permalink: /project/:slug
+    permalink: /experience/:slug
   testimonials:
     output: false
   posts:
@@ -43,9 +43,9 @@ defaults:
     values:
       permalink: /
   - scope:
-      type: projects
+      type: experience
     values:
-      layout: project
+      layout: experience
   - scope:
       type: posts
     values:

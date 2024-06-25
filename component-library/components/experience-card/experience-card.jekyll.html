@@ -1,0 +1,18 @@
+{% assign c = "c-experience-card" %}
+<article class="{{c}} col col-4 col-d-6 col-t-12">
+  <div class="{{c}}__content">
+    <a href="{{ include.experience.url }}" class="{{c}}__image">
+      <img loading="lazy" src="{{ include.experience.image }}" alt="{{ include.experience.title }}">
+    </a>
+    <div class="{{c}}__info">
+      <div class="{{c}}__info-wrap">
+        <h3 class="{{c}}__title">{{ include.experience.title }}</h3>
+      </div>
+      <div class="{{c}}__info-wrap">
+        {% if include.experience.subtitle %}
+        <div class="{{c}}__subtitle">{{ include.experience.subtitle }}</div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</article>

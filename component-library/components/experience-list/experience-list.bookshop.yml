@@ -2,15 +2,15 @@
 spec:
   structures:
     - content_blocks
-  label: Projects List
-  description: Lists all of the site's projects
+  label: Experience LIst
+  description: Lists all of the site's experience
   icon: wysiwyg
   tags:
     - Collections
 
 # Defines the structure of this component, as well as the default values
 blueprint:
-  show_projects: true
+  show_experience: true
 
 # Overrides any fields in the blueprint when viewing this component in the component browser
 preview: {}

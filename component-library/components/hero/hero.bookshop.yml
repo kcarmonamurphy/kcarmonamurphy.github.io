@@ -32,8 +32,8 @@ preview:
   image_alt: Kevin Carmona-Murphy's picture
   cta_button: Get in touch
   cta_button_link: "#contact"
-  works_button: See my works
-  works_button_link: "#projects"
+  works_button: See my experience
+  works_button_link: "#experience"
 
 # Any extra CloudCannon inputs configuration to apply to the blueprint
 _inputs: {}

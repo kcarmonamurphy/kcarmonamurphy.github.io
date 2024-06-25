@@ -1,0 +1,9 @@
+{% if include.show_experience %}
+<div class="container animate">
+  <div class="row">
+    {% for experience in site.experience reversed %}
+      {% bookshop experience-card experience=experience %}
+    {% endfor %}
+  </div>
+</div>
+{% endif %}
