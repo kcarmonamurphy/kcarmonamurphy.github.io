@@ -5,7 +5,7 @@ menu__settings:
     - title: 'Home'
       url: '/'
     - title: 'Experience'
-      url: '/Experience/'
+      url: '/experience/'
     - title: 'Blog'
       url: '/blog/'
     - title: 'Pages'
