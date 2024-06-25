@@ -556,20 +556,20 @@
   /* Pagination */
   /* Sections */
   /* Social Links */
-  /* Page + Post + Project */
+  /* Page + Post + Experience */
   /* Share */
   /* Post navigation */
   /* Related posts */
   /* Disqus comments */
-  /* Project */
-  /* Project Navigation */
+  /* Experience */
+  /* experience Navigation */
   /* Posts List */
   /* Button */
   /* Contact Form */
+  /* Experience List */
   /* Hero */
   /* Page Heading */
   /* Posts List */
-  /* Projects List */
   /* Testimonials Section */
 }
 @media only screen and (max-width: 1300px) {
@@ -3174,7 +3174,7 @@
   }
 }
 @media all, bookshop {
-  .project-subtitle {
+  .experience-subtitle {
     margin: 20px 0 0;
     font-size: 21px;
     line-height: 1;
@@ -3182,32 +3182,32 @@
   }
 }
 @media only screen and (max-width: 576px) {
-  .project-subtitle {
+  .experience-subtitle {
     margin: 16px 0 0;
     font-size: 18px;
   }
 }
 @media all, bookshop {
-  .project__navigation {
+  .experience__navigation {
     max-width: 780px;
     margin: 80px auto 40px;
     text-align: center;
   }
 }
 @media only screen and (max-width: 768px) {
-  .project__navigation {
+  .experience__navigation {
     margin: 60px auto 40px;
   }
 }
 @media all, bookshop {
-  .project__prev:hover {
+  .experience__prev:hover {
     color: #110E38;
   }
-  .project__prev:hover .project__nav__title .arrow-right {
+  .experience__prev:hover .experience__nav__title .arrow-right {
     opacity: 1;
     transform: translateX(3px);
   }
-  .project__nav__info {
+  .experience__nav__info {
     display: inline-block;
     margin: 0 20px 4px 0;
     font-size: 12px;
@@ -3215,12 +3215,12 @@
     line-height: 1.2;
     text-transform: uppercase;
   }
-  .project__nav__title {
+  .experience__nav__title {
     margin-bottom: 20px;
     font-size: 40px;
     line-height: 1.2;
   }
-  .project__nav__title .arrow-right {
+  .experience__nav__title .arrow-right {
     margin-left: 2px;
     font-size: 30px;
     opacity: 0;
@@ -3228,7 +3228,7 @@
   }
 }
 @media only screen and (max-width: 768px) {
-  .project__nav__title {
+  .experience__nav__title {
     font-size: 36px;
   }
 }
@@ -3517,6 +3517,122 @@
   .page a:hover {
     color: #110E38;
     border-bottom-color: #110E38;
+  }
+  .c-experience-card {
+    margin-bottom: 20px;
+    transition: transform 0.2s ease;
+  }
+  .c-experience-card:hover .c-experience-card__title, .c-experience-card:hover .c-experience-card__subtitle {
+    opacity: 1;
+    transform: translateZ(0);
+    transition: transform 0.4s cubic-bezier(0.165, 0.85, 0.45, 1) 0.2s, opacity 0.4s cubic-bezier(0.165, 0.85, 0.45, 1) 0.2s;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .c-experience-card:last-child {
+    margin-bottom: 0;
+  }
+}
+@media all, bookshop {
+  .c-experience-card__image {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    user-select: none;
+    background-color: #d5dce3;
+  }
+  .c-experience-card__image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    transition: all 0.4s ease 0s;
+    opacity: 0;
+    visibility: hidden;
+    background: linear-gradient(360deg, #1495a7 0%, rgba(0, 54, 135, 0.3) 120.95%);
+  }
+  .c-experience-card__image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+    background-color: #d5dce3;
+    pointer-events: none;
+    transition: all 0.4s ease 0s;
+    will-change: transform;
+  }
+  .c-experience-card__image:hover::before {
+    opacity: 1;
+    visibility: visible;
+  }
+  .c-experience-card__image:hover img {
+    transform: scale(1.05);
+  }
+  .c-experience-card__content {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    min-height: 280px;
+    border-radius: 16px;
+    transform: translate(0);
+    box-shadow: 0px 0px 30px rgba(20, 149, 167, 0.1);
+    overflow: hidden;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .c-experience-card__content::after {
+    padding-top: 100%;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .c-experience-card__content .experience__info {
+    padding: 0 32px 32px;
+  }
+}
+@media all, bookshop {
+  .c-experience-card__content::after {
+    content: "";
+    display: table;
+    padding-top: 110%;
+  }
+  .c-experience-card__info {
+    z-index: 1;
+    width: 100%;
+    margin-top: auto;
+    padding: 0 32px 36px;
+    text-align: center;
+    pointer-events: none;
+  }
+  .c-experience-card__info-wrap {
+    overflow: hidden;
+  }
+  .c-experience-card__title {
+    font-size: 28px;
+    line-height: 1.3;
+    margin-bottom: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+  .c-experience-card__subtitle {
+    font-size: 16px;
+    line-height: 1.4;
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+  .c-experience-card__subtitle:hover {
+    opacity: 0.7;
+  }
+  .c-experience-card__title, .c-experience-card__subtitle {
+    color: #fff;
+    opacity: 0;
+    transition: transform 0.4s cubic-bezier(0.165, 0.85, 0.45, 1), opacity 0.4s cubic-bezier(0.165, 0.85, 0.45, 1);
   }
   .c-hero {
     padding: 96px 0;
@@ -3962,122 +4078,6 @@
   .article-info .article__date {
     font-size: 12px;
     line-height: 14px;
-  }
-  .c-project-card {
-    margin-bottom: 20px;
-    transition: transform 0.2s ease;
-  }
-  .c-project-card:hover .c-project-card__title, .c-project-card:hover .c-project-card__subtitle {
-    opacity: 1;
-    transform: translateZ(0);
-    transition: transform 0.4s cubic-bezier(0.165, 0.85, 0.45, 1) 0.2s, opacity 0.4s cubic-bezier(0.165, 0.85, 0.45, 1) 0.2s;
-  }
-}
-@media only screen and (max-width: 768px) {
-  .c-project-card:last-child {
-    margin-bottom: 0;
-  }
-}
-@media all, bookshop {
-  .c-project-card__image {
-    position: absolute;
-    display: block;
-    width: 100%;
-    height: 100%;
-    user-select: none;
-    background-color: #d5dce3;
-  }
-  .c-project-card__image::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    width: 100%;
-    height: 100%;
-    transition: all 0.4s ease 0s;
-    opacity: 0;
-    visibility: hidden;
-    background: linear-gradient(360deg, #1495a7 0%, rgba(0, 54, 135, 0.3) 120.95%);
-  }
-  .c-project-card__image img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 16px;
-    background-color: #d5dce3;
-    pointer-events: none;
-    transition: all 0.4s ease 0s;
-    will-change: transform;
-  }
-  .c-project-card__image:hover::before {
-    opacity: 1;
-    visibility: visible;
-  }
-  .c-project-card__image:hover img {
-    transform: scale(1.05);
-  }
-  .c-project-card__content {
-    position: relative;
-    display: flex;
-    width: 100%;
-    height: 100%;
-    min-height: 280px;
-    border-radius: 16px;
-    transform: translate(0);
-    box-shadow: 0px 0px 30px rgba(20, 149, 167, 0.1);
-    overflow: hidden;
-  }
-}
-@media only screen and (max-width: 1024px) {
-  .c-project-card__content::after {
-    padding-top: 100%;
-  }
-}
-@media only screen and (max-width: 576px) {
-  .c-project-card__content .project__info {
-    padding: 0 32px 32px;
-  }
-}
-@media all, bookshop {
-  .c-project-card__content::after {
-    content: "";
-    display: table;
-    padding-top: 110%;
-  }
-  .c-project-card__info {
-    z-index: 1;
-    width: 100%;
-    margin-top: auto;
-    padding: 0 32px 36px;
-    text-align: center;
-    pointer-events: none;
-  }
-  .c-project-card__info-wrap {
-    overflow: hidden;
-  }
-  .c-project-card__title {
-    font-size: 28px;
-    line-height: 1.3;
-    margin-bottom: 0;
-    transform: translate3d(0, 100%, 0);
-  }
-  .c-project-card__subtitle {
-    font-size: 16px;
-    line-height: 1.4;
-    opacity: 0;
-    transform: translate3d(0, -100%, 0);
-  }
-  .c-project-card__subtitle:hover {
-    opacity: 0.7;
-  }
-  .c-project-card__title, .c-project-card__subtitle {
-    color: #fff;
-    opacity: 0;
-    transition: transform 0.4s cubic-bezier(0.165, 0.85, 0.45, 1), opacity 0.4s cubic-bezier(0.165, 0.85, 0.45, 1);
   }
   .c-testimonial-card__content {
     width: 100%;
