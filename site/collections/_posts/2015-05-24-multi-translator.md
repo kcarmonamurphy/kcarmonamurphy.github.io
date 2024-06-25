@@ -1,7 +1,8 @@
 ---
 date: 2015-05-24 05:20:35 +0300
 title: Multi-translator app using Angular.js
-subtitle: A proof of concept for a React, Express.js, Sequelize ORM and styled-components stack
+description: Translate text into multiple languages using the Yandex Translation API
+tags:   [Yandex, Translation, Angular.js]
 image: '/images/translation.jpg'
 ---
 

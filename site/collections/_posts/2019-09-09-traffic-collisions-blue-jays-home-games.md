@@ -1,7 +1,8 @@
 ---
 date: 2019-09-09 05:20:35 +0300
 title: Traffic Collisions after Blue Jays Home Games
-subtitle: Does higher attendance at Blue Jays home games in Toronto translate to more collisions around the Rogers Centre?
+description: Does higher attendance at Blue Jays home games in Toronto translate to more collisions around the Rogers Centre?
+tags: [Data Science, pandas, numpy]
 image: '/images/blue-jays-player.jpg'
 ---
 

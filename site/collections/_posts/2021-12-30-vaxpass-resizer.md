@@ -1,7 +1,8 @@
 ---
 date: 2021-12-30 05:20:35 +0300
 title: Vaxpass Resizer
-subtitle: Create wallet-sized and passport-sized versions of the Canadian Enhanced Vaccine Certificate
+description: Create wallet-sized and passport-sized versions of the Canadian Enhanced Vaccine Certificate
+tags: [PDFLib]
 image: '/images/covid19.jpg'
 ---
 

@@ -1,7 +1,8 @@
 ---
 date: 2022-03-20 05:20:35 +0300
 title: To-Do with React Hooks & Express.js
-subtitle: A proof of concept for a React, Express.js, Sequelize ORM and styled-components stack
+description: A proof of concept for a React, Express.js, Sequelize ORM and styled-components stack
+tags: [React, Express.js, Sequelize]
 image: '/images/todo.jpg'
 ---
 

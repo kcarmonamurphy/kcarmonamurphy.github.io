@@ -1,7 +1,8 @@
 ---
 date: 2019-11-15 05:20:35 +0300
 title: Neo4j vs PostgreSQL
-subtitle: Neo4j can be substantially faster for certain types of queries because of the benefits gained from index-free adjacency
+description: Neo4j can be substantially faster for certain types of queries because of the benefits gained from index-free adjacency
+tags: [neo4j, PostgreSQL]
 image: '/images/airplane.jpg'
 ---
 
