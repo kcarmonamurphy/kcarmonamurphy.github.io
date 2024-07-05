@@ -28,10 +28,10 @@ preview:
     Strategist</strong> from Albany. I work as a lifestyle, product, and
     landscape photographer, creating images for a diverse range of requests,
     from online media to printed artwork.
-  image: /images/01.jpg
+  image: /images/telephone.jpg
   image_alt: Kevin Carmona-Murphy's picture
   cta_button: Get in touch
-  cta_button_link: "#contact"
+  cta_button_link: "/contact"
   works_button: See my experience
   works_button_link: "#experience"
 

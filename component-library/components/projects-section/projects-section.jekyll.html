@@ -1,5 +1,5 @@
-<!-- begin blog -->
-<section class="section blog">
+<!-- begin projects -->
+<section class="section projects">
   <div class="container">
     <div class="row">
       <div class="col col-12">
@@ -17,7 +17,7 @@
           <div class="row">
             {% if site.posts.size > 0 %}
               {% for post in site.posts offset:0 limit:6 %}
-                {% bookshop blog-card post=post %}
+                {% bookshop projects-card post=post %}
               {% endfor %}
             {% endif %}
           </div>
@@ -28,4 +28,4 @@
     </div>
   </div>
 </section>
-<!-- end blog -->
+<!-- end projects -->

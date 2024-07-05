@@ -1,8 +1,8 @@
 # Metadata about this component, to be used in the CMS
 spec:
   structures: []
-  label: Blog Card
-  description: Blog card used for post lists
+  label: Projects Card
+  description: Projects card used for post lists
   icon: wysiwyg
   tags: []
 

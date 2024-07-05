@@ -30,7 +30,7 @@ collections:
     output: false
   posts:
     output: true
-    permalink: /blog/:slug
+    permalink: /projects/:slug
 
 defaults:
   - scope:
