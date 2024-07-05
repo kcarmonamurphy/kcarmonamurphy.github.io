@@ -563,12 +563,11 @@
   /* Disqus comments */
   /* Experience */
   /* experience Navigation */
-  /* Posts List */
   /* Button */
-  /* Contact Form */
   /* Experience List */
   /* Hero */
   /* Page Heading */
+  /* Posts List */
   /* Posts List */
   /* Testimonials Section */
 }
@@ -3233,159 +3232,6 @@
   }
 }
 @media all, bookshop {
-  .c-blog-card {
-    margin-bottom: 20px;
-    will-change: transform;
-    transition: transform 0.2s;
-  }
-  .c-blog-card:hover {
-    transform: translateY(-4px);
-  }
-  .c-blog-card:hover .article__inner {
-    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.1);
-  }
-}
-@media only screen and (max-width: 768px) {
-  .c-blog-card:last-child {
-    margin-bottom: 0;
-  }
-}
-@media all, bookshop {
-  .c-blog-card__inner {
-    border-radius: 16px;
-    overflow: hidden;
-    transform: translate(0);
-    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.07);
-    transition: box-shadow 0.2s;
-  }
-  .c-blog-card__image-wrap {
-    background: #fff;
-  }
-  .c-blog-card__image {
-    position: relative;
-    display: block;
-    height: 0;
-    padding-bottom: 71.25%;
-    background: #d5dce3;
-    overflow: hidden;
-  }
-  .c-blog-card__image img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    background-color: #d5dce3;
-  }
-  .c-blog-card__content {
-    position: relative;
-    z-index: 1;
-    padding: 28px;
-    margin-top: -20px;
-    border-radius: 16px 16px 0 0;
-    background: #fff;
-  }
-  .c-blog-card__tags-box {
-    display: flex;
-  }
-  .c-blog-card__tag {
-    position: relative;
-    z-index: 1;
-    display: inline-block;
-    padding: 8px 12px;
-    margin: 0 4px 4px 0;
-    font-size: 12px;
-    line-height: 10px;
-    font-weight: 600;
-    text-transform: capitalize;
-    border-radius: 8px;
-    overflow: hidden;
-    color: #fff;
-    background: linear-gradient(90deg, #1495a7 0%, #003687 167%);
-  }
-  .c-blog-card__tag:hover:before {
-    opacity: 1;
-  }
-  .c-blog-card__tag::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    display: block;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    border-radius: 8px;
-    will-change: transform;
-    transition: opacity 0.35s;
-    background: linear-gradient(90deg, #1495a7 0%, #003687 107%);
-  }
-  .c-blog-card__tag:last-child {
-    margin: 0 0 4px 0;
-  }
-  .c-blog-card__title {
-    margin: 16px 0;
-    font-size: 24px;
-    line-height: 1.3;
-    font-weight: 700;
-  }
-  .c-blog-card__title a:hover {
-    color: #110E38;
-  }
-}
-@media only screen and (max-width: 576px) {
-  .c-blog-card__title {
-    font-size: 22px;
-  }
-}
-@media all, bookshop {
-  .c-blog-card__excerpt {
-    display: -webkit-box;
-    font-size: 15px;
-    line-height: 1.6;
-    margin-bottom: 20px;
-    color: #110E38;
-    overflow-y: hidden;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-  }
-  .c-blog-card__meta {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-  .c-blog-card__author-image {
-    position: relative;
-    width: 44px;
-    height: 44px;
-    margin-right: 8px;
-    border-radius: 50%;
-    overflow: hidden;
-    background-color: #d5dce3;
-  }
-  .c-blog-card__author-image img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    border-radius: 50%;
-    object-fit: cover;
-  }
-  .c-blog-card__info {
-    display: flex;
-    flex-direction: column;
-  }
-  .c-blog-card__author-name {
-    margin-bottom: 6px;
-    font-size: 16px;
-    line-height: 1;
-    font-weight: 600;
-  }
-  .c-blog-card__date {
-    font-size: 12px;
-    line-height: 14px;
-  }
   .c-button {
     position: relative;
     z-index: 1;
@@ -3445,66 +3291,6 @@
   .c-button--large {
     padding: 24px 44px;
     font-size: 18px;
-  }
-  .c-contact-form .container {
-    position: relative;
-  }
-  .c-contact-form__form-box {
-    max-width: 580px;
-    margin: 0 auto;
-    padding-top: 140px;
-  }
-  .c-contact-form__contact-head {
-    margin-bottom: 48px;
-    text-align: center;
-  }
-  .c-contact-form__contact-title {
-    display: inline-block;
-    margin-bottom: 20px;
-    font-size: 58px;
-  }
-  .c-contact-form__contact-description {
-    font-size: 20px;
-    font-weight: 600;
-  }
-}
-@media only screen and (max-width: 576px) {
-  .c-contact-form__contact-description {
-    font-size: 16px;
-  }
-}
-@media all, bookshop {
-  .c-contact-form__form {
-    position: relative;
-    margin-bottom: 60px;
-  }
-  .c-contact-form__form-group {
-    margin-bottom: 20px;
-    font-size: 0;
-  }
-  .c-contact-form__form-group--button {
-    text-align: center;
-  }
-  .c-contact-form__form-input {
-    width: 100%;
-    padding: 22px;
-    font-size: 16px;
-    font-weight: 500;
-    border: 1px solid #d5dce3;
-    border-radius: 8px;
-    outline: none;
-    transition: all 0.35s;
-    resize: vertical;
-    color: #110E38;
-    background: #fff;
-  }
-  .c-contact-form__form-input::placeholder {
-    font-weight: 500;
-    color: rgba(17, 14, 56, 0.3);
-  }
-  .c-contact-form__form-input:focus {
-    border-color: #1495a7;
-    box-shadow: 0px 4px 10px rgba(20, 149, 167, 0.25);
   }
   .page {
     max-width: 780px;
@@ -4076,6 +3862,159 @@
     font-weight: 600;
   }
   .article-info .article__date {
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .c-projects-card {
+    margin-bottom: 20px;
+    will-change: transform;
+    transition: transform 0.2s;
+  }
+  .c-projects-card:hover {
+    transform: translateY(-4px);
+  }
+  .c-projects-card:hover .article__inner {
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.1);
+  }
+}
+@media only screen and (max-width: 768px) {
+  .c-projects-card:last-child {
+    margin-bottom: 0;
+  }
+}
+@media all, bookshop {
+  .c-projects-card__inner {
+    border-radius: 16px;
+    overflow: hidden;
+    transform: translate(0);
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.07);
+    transition: box-shadow 0.2s;
+  }
+  .c-projects-card__image-wrap {
+    background: #fff;
+  }
+  .c-projects-card__image {
+    position: relative;
+    display: block;
+    height: 0;
+    padding-bottom: 71.25%;
+    background: #d5dce3;
+    overflow: hidden;
+  }
+  .c-projects-card__image img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-color: #d5dce3;
+  }
+  .c-projects-card__content {
+    position: relative;
+    z-index: 1;
+    padding: 28px;
+    margin-top: -20px;
+    border-radius: 16px 16px 0 0;
+    background: #fff;
+  }
+  .c-projects-card__tags-box {
+    display: flex;
+  }
+  .c-projects-card__tag {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    padding: 8px 12px;
+    margin: 0 4px 4px 0;
+    font-size: 12px;
+    line-height: 10px;
+    font-weight: 600;
+    text-transform: capitalize;
+    border-radius: 8px;
+    overflow: hidden;
+    color: #fff;
+    background: linear-gradient(90deg, #1495a7 0%, #003687 167%);
+  }
+  .c-projects-card__tag:hover:before {
+    opacity: 1;
+  }
+  .c-projects-card__tag::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    display: block;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    border-radius: 8px;
+    will-change: transform;
+    transition: opacity 0.35s;
+    background: linear-gradient(90deg, #1495a7 0%, #003687 107%);
+  }
+  .c-projects-card__tag:last-child {
+    margin: 0 0 4px 0;
+  }
+  .c-projects-card__title {
+    margin: 16px 0;
+    font-size: 24px;
+    line-height: 1.3;
+    font-weight: 700;
+  }
+  .c-projects-card__title a:hover {
+    color: #110E38;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .c-projects-card__title {
+    font-size: 22px;
+  }
+}
+@media all, bookshop {
+  .c-projects-card__excerpt {
+    display: -webkit-box;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #110E38;
+    overflow-y: hidden;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+  .c-projects-card__meta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .c-projects-card__author-image {
+    position: relative;
+    width: 44px;
+    height: 44px;
+    margin-right: 8px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #d5dce3;
+  }
+  .c-projects-card__author-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  .c-projects-card__info {
+    display: flex;
+    flex-direction: column;
+  }
+  .c-projects-card__author-name {
+    margin-bottom: 6px;
+    font-size: 16px;
+    line-height: 1;
+    font-weight: 600;
+  }
+  .c-projects-card__date {
     font-size: 12px;
     line-height: 14px;
   }
