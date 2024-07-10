@@ -1,0 +1,23 @@
+<!-- begin resumes -->
+<section class="section projects">
+  <div class="container">
+    <div class="row">
+      <div class="col col-12">
+        <div class="contaniner__inner animate">
+
+          <div class="section__info">
+            <div class="section__head">
+              <h2 class="section__title">{{ include.title }}</h2>
+            </div>
+            <div class="section__description">{{ include.description_html }} </div>
+          </div>
+
+          <div class="row">
+            {% bookshop projects-card post=site.resumes.first %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end resumes -->

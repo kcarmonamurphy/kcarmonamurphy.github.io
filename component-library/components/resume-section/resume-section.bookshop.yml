@@ -2,8 +2,8 @@
 spec:
   structures:
     - content_blocks
-  label: Testimonials
-  description: Testimonials Section with heading, a description and a link
+  label: Projects
+  description: Projects Section with heading, a image, a description and a link
   icon: wysiwyg
   tags:
     - Content
@@ -12,12 +12,16 @@ spec:
 blueprint:
   title: ""
   description_html: ""
-  show_testimonials: true
+  link_url: ""
+  show_posts: true
 
 # Overrides any fields in the blueprint when viewing this component in the component browser
 preview:
-  title: LinkedIn Reviews
-  description_html: ""
+  title: Recent Works
+  description_html: Vonge blog features productivity, tips, inspiration and
+    strategies for massive profits. Find out how to set up a successful blog or
+    how to make yours even better!
+  link_url: /projects
 
 # Any extra CloudCannon inputs configuration to apply to the blueprint
 _inputs: {}

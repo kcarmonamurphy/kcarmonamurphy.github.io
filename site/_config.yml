@@ -31,6 +31,9 @@ collections:
   posts:
     output: true
     permalink: /projects/:slug
+  resumes: 
+    output: true
+    permalink: /resumes/:slug
 
 defaults:
   - scope:
