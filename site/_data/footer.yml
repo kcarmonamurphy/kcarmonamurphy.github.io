@@ -11,7 +11,7 @@ footer_menu__settings:
     - title: 'Contact'
       url: '/contact/'
     - title: 'Resume'
-      url: '/resumes/july-2024'
+      url: '/resumes/december-2025'
 
 copyright_text_html: >-
   <p> 2024 &copy; Kevin Carmona-Murphy. Template by <a href="https://cloudcannon.com/">CloudCannon</a>.</p>
